@@ -4,7 +4,7 @@ Fedora 4 / ActiveFedora 8 test drive
 1. Install prerequisites:
    * Git
    * Java 1.7+ ([download](http://www.oracle.com/technetwork/java/javase/downloads/index.html))
-   * Ruby 1.9+ (recommended: 2.1 using [rbenv](https://github.com/sstephenson/rbenv) or [RVM](http://rvm.io/))
+   * Ruby 2.0+ (recommended: 2.1 using [rbenv](https://github.com/sstephenson/rbenv) or [RVM](http://rvm.io/))
    * Bundler (`gem install bundler`)
 
 2. Clone this repo
