@@ -1,0 +1,24 @@
+Fedora 4 / ActiveFedora 8 test drive
+------------------------------------
+
+1. Install prerequisites:
+   * Git
+   * Java 1.7+ ([download](http://www.oracle.com/technetwork/java/javase/downloads/index.html))
+   * Ruby 1.9+ (recommended: 2.1 using [rbenv](https://github.com/sstephenson/rbenv) or [RVM](http://rvm.io/))
+   * Bundler (`gem install bundler`)
+
+2. Clone this repo
+   ```sh
+   $ git clone https://github.com/escowles/testdrive.git
+   ```
+
+3. Install gems:
+    ```sh
+    $ cd testdrive
+    $ bundle install
+    ```
+
+4. Download Hydra-Jetty with Fedora 4:
+   ```sh
+   $ bundle exec rake jetty:unzip
+   ```
