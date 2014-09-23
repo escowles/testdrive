@@ -1,4 +1,4 @@
-# 5. link to shared name record
+# 3. link w/custom predicate
 require 'active_fedora'
 
 class MYVOCAB < RDF::Vocabulary("http://example.org/vocab/")

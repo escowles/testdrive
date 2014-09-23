@@ -1,4 +1,4 @@
-# 4. add datastream content
+# 2. add a datastream
 require 'active_fedora'
 
 class TestObject < ActiveFedora::Base

@@ -1,4 +1,4 @@
-# 3. start with simple object with title
+# 1. object with properties
 require 'active_fedora'
 
 class TestObject < ActiveFedora::Base
