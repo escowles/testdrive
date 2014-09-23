@@ -22,3 +22,15 @@ Fedora 4 / ActiveFedora 8 test drive
    ```sh
    $ bundle exec rake jetty:unzip
    ```
+
+5. Start Jetty:
+   ```sh
+   $ bundle exec rake jetty:start
+   ```
+
+6. Run demo scripts:
+   ```sh
+   $ bundle exec ruby demo1.rb
+   $ bundle exec ruby demo2.rb
+   $ bundle exec ruby demo3.rb
+   ```
