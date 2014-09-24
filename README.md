@@ -7,6 +7,12 @@ Fedora 4 / ActiveFedora 8 test drive
    * Ruby 2.0+ (recommended: 2.1 using [rbenv](https://github.com/sstephenson/rbenv) or [RVM](http://rvm.io/))
    * Bundler (`gem install bundler`)
 
+   Make sure the right versions of Java and Ruby are being used with:
+   ```sh
+   $ java -version
+   $ ruby -v
+   ```
+
 2. Clone this repo
    ```sh
    $ git clone https://github.com/escowles/testdrive.git
