@@ -16,5 +16,4 @@ obj.save
 obj.ds1.create_version
 obj.ds1.content = "New Version of Datastream Content"
 obj.save
-puts obj.ds1.versions
 puts "#{ActiveFedora.fedora.host}#{ActiveFedora.fedora.base_path}/#{obj.pid}"
