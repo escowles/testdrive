@@ -42,6 +42,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    addressable (2.3.5)
     builder (3.2.2)
     childprocess (0.5.3)
       ffi (~> 1.0, >= 1.0.11)
@@ -75,6 +76,8 @@ GEM
     json (1.8.1)
     json-ld (1.1.6)
       rdf (~> 1.1, >= 1.1.4)
+    launchy (2.3.0)
+      addressable (~> 2.3)
     linkeddata (1.1.1)
       equivalent-xml (>= 0.4.0)
       json-ld (>= 1.1.1)
@@ -177,5 +180,6 @@ PLATFORMS
 DEPENDENCIES
   active-fedora!
   jettywrapper
+  launchy
   ldp!
   rake
