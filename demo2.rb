@@ -7,9 +7,10 @@ class TestObject < ActiveFedora::Base
   has_file_datastream name: 'ds1'
 end
 
-# create an object and set a property and datastream content
-obj = TestObject.new( title: "Test Object Title", creator: "Dr. Seuss" )
-obj.ds1.content = "Test Datastream Content"
-obj.ds1.original_name = 'test.txt'
+# Create an object and set a property and datastream content
+# When you download datastreams from fedora, the filename will be whatever you set as its original_name
+obj = TestObject.new( title: "The Lorax", creator: "Dr. Seuss" )
+obj.ds1.content = "I speak for the trees."
+obj.ds1.original_name = 'lorax.txt'
 obj.save
 puts "#{ActiveFedora.fedora.host}#{ActiveFedora.fedora.base_path}/#{obj.pid}"
