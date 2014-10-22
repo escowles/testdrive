@@ -7,14 +7,15 @@ class TestObject < ActiveFedora::Base
   has_file_datastream name: 'ds1'
 end
 
-# create an object and set a property and datastream content
-obj = TestObject.new( title: "Test Object Title", creator: "Dr. Seuss" )
-obj.ds1.content = "Test Datastream Content"
+# create an object and a datastream, then update the datasream's content once,
+# causing the datastream to have two versions in its history
+obj = TestObject.new( title: "One Fish Two Fish", creator: "Dr. Seuss" )
+obj.ds1.content = "One Fish, Two Fish"
 obj.ds1.original_name = 'test.txt'
 obj.save
 
 obj.ds1.create_version
-obj.ds1.content = "New Version of Datastream Content"
+obj.ds1.content = "Red Fish, Blue Fish"
 obj.save
 puts "#{ActiveFedora.fedora.host}#{ActiveFedora.fedora.base_path}/#{obj.pid}"
 

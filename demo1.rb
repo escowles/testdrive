@@ -6,7 +6,7 @@ class TestObject < ActiveFedora::Base
   property :creator, predicate: RDF::DC11.creator
 end
 
-# create an object and set a property and datastream content
-obj = TestObject.new( title: "Test Object Title", creator: "Dr. Seuss" )
+# create an object with some properties set
+obj = TestObject.new( title: "Green Eggs and Ham", creator: "Dr. Seuss" )
 obj.save
 puts "#{ActiveFedora.fedora.host}#{ActiveFedora.fedora.base_path}/#{obj.pid}"
