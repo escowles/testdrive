@@ -10,7 +10,7 @@ end
 class TestObject < ActiveFedora::Base
   property :title, predicate: ::RDF::DC11.title
   property :creator, predicate: MYVOCAB.creator, class_name: 'TestConcept'
-  has_file_datastream name: 'ds1'
+  contains 'ds1'
 end
 
 # create dr. seuss record

@@ -4,7 +4,7 @@ require 'launchy'
 class TestObject < ActiveFedora::Base
   property :title, predicate: ::RDF::DC11.title
   property :creator, predicate: ::RDF::DC11.creator
-  has_file_datastream name: 'ds1'
+  contains 'ds1'
 end
 
 # create an object and set a property and datastream content

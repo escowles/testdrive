@@ -6,12 +6,12 @@ require 'active_fedora'
 class TestObject < ActiveFedora::Base
   property :title, predicate: ::RDF::DC11.title
   property :creator, predicate: ::RDF::DC11.creator
-  has_file_datastream name: 'ds1'
+  contains 'ds1'
   has_metadata 'dc', type: ActiveFedora::QualifiedDublinCoreDatastream
   has_attributes :publisher, datastream: 'dc'
 end
 
-# create an object and set a property and datastream content
+# create an object and set a property stored in datastream content
 obj = TestObject.new( title: "A Wrinkle in Time", creator: "Madeleine L’Engle" )
 obj.publisher = "Macmillan"
 obj.ds1.content = "Life, with its rules, its obligations, and its freedoms, is like a sonnet: You're given the form, but you have to write the sonnet yourself."
