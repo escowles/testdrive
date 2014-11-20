@@ -2,8 +2,8 @@
 require 'active_fedora'
 
 class TestObject < ActiveFedora::Base
-  property :title, predicate: RDF::DC11.title
-  property :creator, predicate: RDF::DC11.creator
+  property :title, predicate: ::RDF::DC11.title
+  property :creator, predicate: ::RDF::DC11.creator
   has_file_datastream name: 'ds1'
 end
 
@@ -17,6 +17,6 @@ obj.save
 obj.ds1.create_version
 obj.ds1.content = "Red Fish, Blue Fish"
 obj.save
-puts "#{ActiveFedora.fedora.host}#{ActiveFedora.fedora.base_path}/#{obj.pid}"
+puts "#{ActiveFedora.fedora.host}#{ActiveFedora.fedora.base_path}/#{obj.id}"
 
 puts obj.ds1.versions
