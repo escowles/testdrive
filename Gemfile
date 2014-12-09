@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem 'active-fedora', github: 'projecthydra/active_fedora', branch: 'fedora-4'
+gem 'active-fedora', github: 'projecthydra/active_fedora', branch: 'master'
 gem 'ldp', github: 'cbeer/ldp'
 gem 'jettywrapper'
 gem 'rake'

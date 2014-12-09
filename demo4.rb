@@ -2,14 +2,14 @@
 require 'active_fedora'
 
 class TestObject < ActiveFedora::Base
-  property :title, predicate: ::RDF::DC11.title
+  property :title, predicate: ::RDF::DC11.title, multiple:false
   property :creator, predicate: ::RDF::DC11.creator
   contains 'ds1'
 end
 
 # create an object and a file, then update the file's content once,
 # causing the file to have two versions in its history
-obj = TestObject.new( title: "One Fish Two Fish", creator: "Dr. Seuss" )
+obj = TestObject.new( title: "One Fish Two Fish", creator: ["Dr. Seuss"] )
 obj.ds1.content = "One Fish, Two Fish"
 obj.ds1.original_name = 'test.txt'
 obj.save
