@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
-gem 'active-fedora', github: 'projecthydra/active_fedora', branch: 'fedora-4'
-gem 'ldp', github: 'cbeer/ldp'
-gem 'jettywrapper'
+
+gem "active-fedora", "~> 9.2"
+gem 'jettywrapper', '>= 2.0.0'
+gem 'ldp', '~> 0.3'
 gem 'rake'
 gem 'launchy'
