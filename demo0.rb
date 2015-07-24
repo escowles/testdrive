@@ -8,7 +8,7 @@ class TestObject < ActiveFedora::Base
 end
 
 # create an object and set a property and datastream content
-obj = TestObject.new( title: "Oh, the Places You'll Go!", creator: "Dr. Seuss" )
+obj = TestObject.new( title: ["Oh, the Places You'll Go!"], creator: ["Dr. Seuss"] )
 obj.ds1.content = "Congratulations! Today is your day. You're off to Great Places! You're off and away!"
 obj.ds1.original_name = 'oh the places youll go.txt'
 obj.save

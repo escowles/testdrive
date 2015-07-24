@@ -1,5 +1,6 @@
 # 3. link w/custom predicate
 require 'active_fedora'
+require 'launchy'
 
 class MYVOCAB < RDF::Vocabulary("http://example.org/vocab/")
   property :creator
@@ -14,10 +15,10 @@ class TestObject < ActiveFedora::Base
 end
 
 # create dr. seuss record
-dr_seuss = TestConcept.new( label: "Dr. Seuss" )
+dr_seuss = TestConcept.new( label: ["Dr. Seuss"] )
 dr_seuss.save
 
 # create an object and set a property and datastream content
-obj = TestObject.new( title: "The Cat in the Hat", creator: dr_seuss.rdf_subject )
+obj = TestObject.new( title: ["The Cat in the Hat"], creator: [dr_seuss.rdf_subject] )
 obj.save
-puts "#{ActiveFedora.fedora.host}#{ActiveFedora.fedora.base_path}/#{obj.id}"
+Launchy.open( "#{ActiveFedora.fedora.host}#{ActiveFedora.fedora.base_path}/#{obj.id}" )

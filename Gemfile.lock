@@ -191,6 +191,3 @@ DEPENDENCIES
   launchy
   ldp (~> 0.3)
   rake
-
-BUNDLED WITH
-   1.10.3
