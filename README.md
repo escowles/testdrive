@@ -1,3 +1,5 @@
+# Note: This tutorial is very out of date.
+
 Fedora 4 / ActiveFedora 8 test drive
 ------------------------------------
 
